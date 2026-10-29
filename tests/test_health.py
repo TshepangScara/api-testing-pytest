@@ -1,8 +1,8 @@
 import requests
 
-BASE_URL = "https://restful-booker.herokuapp.com"
 
+def test_ping_returns_201(base_url):
+    response = requests.get(f"{base_url}/ping")
 
-def test_ping_returns_201():
-    response = requests.get(f"{BASE_URL}/ping")
     assert response.status_code == 201
+#Health check test to verify the API is up and running
