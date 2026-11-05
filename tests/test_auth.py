@@ -34,3 +34,10 @@ def test_invalid_password_returns_401(base_url, credentials):
     response = requests.post(f"{base_url}/auth", json=payload)
 
     assert response.status_code == 401
+
+def test_token_fixture_returns_a_token(token):
+    assert isinstance(token, str)
+    assert len(token) > 0
+
+def test_token_is_reused(token):
+    assert token
