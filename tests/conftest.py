@@ -27,8 +27,3 @@ def token(base_url, credentials):
     response = requests.post(f"{base_url}/auth", json=credentials)
     assert response.status_code == 200, f"Login failed: {response.text}"
     return response.json()["token"]
-
-def test_token_is_reused(token):
-    assert token
-
-  
