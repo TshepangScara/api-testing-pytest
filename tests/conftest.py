@@ -20,7 +20,7 @@ def credentials():
     password = os.environ.get("RB_PASSWORD")
 
     if not username or not password:
-        pytest.fail("Set RB_USERNAME and RB_PASSWORD in the terminal before running tests")
+        pytest.fail("RB_USERNAME and RB_PASSWORD missing. Add them to a .env file in the project root (see README)")
 
     return {"username": username, "password": password}
 
