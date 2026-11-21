@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/ping"
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Ping returns 201\", function () {\r
+
+      \    pm.response.to.have.status(201);\r
+
+      });\r
+
+      //This is a health check "
+    language: text/javascript
+order: 1000

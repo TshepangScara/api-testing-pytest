@@ -1,0 +1,11 @@
+name: Restful-Booker
+values:
+  - key: base_url
+    value: ''
+  - key: username
+    value: ''
+  - key: password
+    value: ''
+  - key: bookingid
+    value: ''
+color: 120
